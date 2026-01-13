@@ -13,7 +13,7 @@
   get_url: url=https://getcomposer.org/composer-stable.phar dest={{symfony_composer_path}} mode=0755 validate_certs=no force=no
   when: symfony_composer_version is not defined and symfony_composer_channel is not defined
 
-- name: Install composer {{symfony_composer_version}}
+- name: Install composer {{ symfony_composer_version | default }}
   get_url: url=https://getcomposer.org/download/{{symfony_composer_version}}/composer.phar dest={{symfony_composer_path}} mode=0755 validate_certs=no force=no
   when: symfony_composer_version is defined
 
