@@ -21,7 +21,7 @@
   get_url: url=https://getcomposer.org/installer dest={{ansistrano_deploy_to}}/composer-installer.php mode=0755 validate_certs=no force=no
   when: symfony_composer_channel is defined
 
-- name: Install composer {{symfony_composer_channel}}
+- name: Install composer {{ symfony_composer_channel | default }}
   shell:
     cmd: "{{symfony_php_path}} composer-installer.php --quiet --{{symfony_composer_channel}}"
     chdir: "{{ansistrano_deploy_to}}"
