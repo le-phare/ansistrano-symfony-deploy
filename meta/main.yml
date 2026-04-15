@@ -1,10 +1,13 @@
 ---
 dependencies:
-  - ansistrano.deploy
+  - name: ansistrano.deploy
+    version: 3.14.0
 
 galaxy_info:
-  author: Conny Brunnkvist
+  author: Le Phare
+  company: Le Phare
   description: Common post-deploy tasks for Symfony projects
+  issue_tracker_url: https://github.com/le-phare/ansistrano-symfony-deploy
   license: MIT
   min_ansible_version: 2.6
   platforms:
@@ -13,8 +16,9 @@ galaxy_info:
         - any
 
   galaxy_tags:
-    - web
     - ansistrano
     - deploy
     - deployment
+    - php
     - symfony
+    - web
