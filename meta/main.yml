@@ -1,7 +1,6 @@
 ---
 dependencies:
   - name: ansistrano.deploy
-    version: 3.14.0
 
 galaxy_info:
   author: Le Phare
